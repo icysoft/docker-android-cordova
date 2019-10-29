@@ -1,0 +1,9 @@
+language: generic
+
+services:
+  - docker
+
+script:
+  - docker build -t dinno/docker-android-cordova:latest .
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker push dinno/docker-android-cordova:latest
