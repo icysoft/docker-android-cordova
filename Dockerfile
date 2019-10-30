@@ -1,7 +1,7 @@
 FROM openjdk:8-jdk-slim
 
 ############## NODE JS ###############
-ENV NODE_VERSION=12.13.0 \
+ENV NODE_VERSION=10.17.0 \
     PATH=$PATH:/opt/node/bin
 
 RUN apt-get update && apt-get install -y curl git ca-certificates --no-install-recommends && \
